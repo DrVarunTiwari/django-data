@@ -1,0 +1,16 @@
+<html>
+    <body>
+       <div>
+        <h1> Add Student Record</h1>
+        <form action="{% url 'addrec' %}" method="post">
+            {% csrf_token %}
+Enter Sid-: <input type="text" name="sid"> <br>
+Enter Sname-:<input type="text" name="sname"> <br>
+Enter Sage-:<input type="text" name="sage"> <br>
+Enter Sadd-:<input type="text" name="sadd"> <br>
+<button type="submit">Submit</button>
+        </form>
+    </div>
+    </body>
+
+</html>

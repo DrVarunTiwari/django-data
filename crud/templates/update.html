@@ -1,0 +1,16 @@
+<html>
+    <body>
+       <div>
+        <h1> Update Student Record</h1>
+        <form action="{% url 'uprec' std.id %}" method="post">
+            {% csrf_token %}
+Enter Sid-: <input type="text" name="sid" value="{{std.sid}}"> <br>
+Enter Sname-:<input type="text" name="sname" value="{{std.sname}}"> <br>
+Enter Sage-:<input type="text" name="sage" value="{{std.sage}}"> <br>
+Enter Sadd-:<input type="text" name="sadd" value="{{std.sadd}}"> <br>
+<button type="submit">Submit</button>
+        </form>
+    </div>
+    </body>
+
+</html>

@@ -1,0 +1,29 @@
+<html>
+    <body>
+        <div>
+<table border="1">
+    <thead>
+        <th>ID</th>
+        <th>Sid</th>
+        <th> Sname</th>
+        <th>Sage</th>
+        <th>Sadd</th>
+        <th colspan="3"> Action </th>
+    </thead>
+    {% for s in std %}
+    <tr>
+        <td>{{s.id}}</td>
+        <td>{{s.sid}}</td>
+        <td>{{s.sname}}</td>
+        <td>{{s.sage}}</td>
+        <td>{{s.sadd}}</td>
+        <td><a href="update/{{s.id}}"><button>Update</button></a></td>
+        <td><a href="delete/{{s.id}}"><button>Delete</button></a></td>
+    </tr>
+    {% endfor %}
+</table>
+<br><br>
+<a href="{% url 'add' %}"><button>Add Student</button></a>
+        </div>
+    </body>
+</html>
